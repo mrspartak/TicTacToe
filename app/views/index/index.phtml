@@ -1,0 +1,51 @@
+{% extends "layouts/main.phtml" -%}
+
+{% block content %}
+
+{% include "errors/messages.phtml" %}
+<div class="row field">
+	
+</div>
+
+<div class="row">
+<table class="table">
+	<tr>
+  	<th>Name</th>
+    <th>Time</th>
+  </tr>
+{% if records %}
+{% for record in records %}
+	<tr>
+  	<td>{{ record.name }}</td>
+    <td>{{ record.time }}</td>
+  </tr>
+{% endfor %}
+{% endif %}
+</table>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      	<h4 class="modal-title" id="myModalLabel">Game is over</h4>
+      </div>
+      <div class="modal-body">
+      	The game lasted for <span class="time"></span> sec. You can save your result. <br>
+      	<form>
+        	<input type="text" class="name form-control" placeholder="Input your name">
+        </form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-default" data-dismiss="modal" onClick="window.location.reload();">Close</button>
+      	<button type="button" class="btn btn-primary" onClick="App.data.saveRecord();">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+App.init();
+</script>
+{% endblock %}

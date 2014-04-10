@@ -1,0 +1,55 @@
+.text-center{ text-align:center }
+.vertical-resize {resize:vertical !important;}
+.well-vsm {padding: 9px;border-radius: 3px;margin-bottom: 0px;}
+.margin-bottom-6 {margin-bottom:6px;}
+.padding-bottom-10 {padding-bottom:10px;}
+.padding-bottom-14 {padding-bottom:14px;}
+.no-decoration {text-decoration: none !important;}
+.no-border-radius {border-radius:0 !important;}
+
+.glyphicon, .caret {line-height:inherit;}
+#recaptcha_area, #recaptcha_table, .recaptchatable, #recaptcha_response_field { line-height: normal !important;}
+
+hr {
+  border-color: #ccc;
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.contain {
+	width: 600px;
+	margin:0 auto;
+}
+
+.field {
+	width: 802px;
+	height:802px;
+	padding:1px;
+	
+	background:#ccc;
+	margin:0 auto;
+}
+
+.cell {
+	margin: 0px;
+	padding: 0px;
+	margin-right:1px;
+	margin-bottom:1px;
+	display:inline-block;
+	float:left;
+	width:39px;
+	height:39px;
+	background:#fff;
+	
+	cursor:pointer;
+}
+
+.cell span {
+	line-height:39px;
+	text-align:center;
+	font-size:34px;
+}
