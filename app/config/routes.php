@@ -50,7 +50,7 @@ $app->post(
 				
 				$rec = new Record();
 				$rec->name = $name;
-				$rec->time = $time;
+				$rec->theTime = $time;
 				$rec->save();
 				
 				$response = $data;
