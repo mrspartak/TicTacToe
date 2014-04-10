@@ -18,12 +18,6 @@ $app = new Phalcon\Mvc\Micro($di);
 
 $app->url->setBaseUri($app->config->app->base_uri);
 
-$app->before(
-	function () use ($app) {
-		$app->session->start();
-	}
-);
-
 require_once(ROOTDIR . '/app/config/routes.php');
 
 try {

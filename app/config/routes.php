@@ -4,7 +4,7 @@ $app->get(
 	function () use ($app) {
 		
 		$records = Record::find(array(
-    	"limit" => "2",
+    	"limit" => 2,
 			"order" => 'id DESC'
 		));
 		echo $app['view']->render(
